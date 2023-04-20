@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test-storybook": "test-storybook"
+    "test-storybook": "test-storybook",
+    "chromatic": "npx chromatic --project-token=b75d78f88451 --exit-once-uploaded"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
@@ -39,5 +40,7 @@
   },
   "msw": {
     "workerDirectory": "public"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "my-react-app-storybook@0.0.0"
 }
