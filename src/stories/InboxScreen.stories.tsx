@@ -10,6 +10,7 @@ import {
   waitForElementToBeRemoved,
   within,
 } from "@storybook/testing-library";
+import { expect } from "@storybook/jest";
 
 const meta = {
   component: InboxScreen,
@@ -44,6 +45,16 @@ export const Default: Story = {
       await fireEvent.click(canvas.getByLabelText("pinTask-1"));
       // Simulates pinning the third task
       await fireEvent.click(canvas.getByLabelText("pinTask-3"));
+      // Assertions
+      await expect(
+        canvas.getByLabelText("pinTask-1").getElementsByClassName("icon")[0]
+      ).toHaveStyle("fill: #8dc700");
+      await expect(
+        canvas.getByLabelText("pinTask-2").getElementsByClassName("icon")[0]
+      ).toHaveStyle("fill: #cecccc");
+      await expect(
+        canvas.getByLabelText("pinTask-3").getElementsByClassName("icon")[0]
+      ).toHaveStyle("fill: #8dc700");
     });
   },
 };

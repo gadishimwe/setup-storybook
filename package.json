@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test-storybook": "test-storybook",
+    "test-storybook": "test-storybook --coverage",
     "chromatic": "npx chromatic --project-token=b75d78f88451 --exit-once-uploaded"
   },
   "dependencies": {
@@ -19,10 +19,12 @@
     "react-redux": "^8.0.5"
   },
   "devDependencies": {
+    "@storybook/addon-coverage": "^0.0.8",
     "@storybook/addon-essentials": "^7.0.6",
     "@storybook/addon-interactions": "^7.0.6",
     "@storybook/addon-links": "^7.0.6",
     "@storybook/blocks": "^7.0.6",
+    "@storybook/jest": "^0.1.0",
     "@storybook/react": "^7.0.6",
     "@storybook/react-vite": "^7.0.6",
     "@storybook/test-runner": "^0.10.0",
